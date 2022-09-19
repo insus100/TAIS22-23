@@ -37,7 +37,7 @@ protected:
         int altura;
         int tam;
         TreeNode(T const& e, Link i = nullptr, Link d = nullptr,
-            int alt = 1, int tam = 1) : elem(e), iz(i), dr(d), altura(alt), tam(1) {}
+            int alt = 1, int tam = 1) : elem(e), iz(i), dr(d), altura(alt), tam(tam) {}
     };
 
     // puntero a la raíz de la estructura jerárquica de nodos
@@ -92,6 +92,13 @@ public:
         return borra(e, raiz);
     }
 
+    T const& kesimo(int k) const {
+        Link p = pertenece(k, raiz);
+        if (p == nullptr)
+            return -1;
+        return p->elem;
+    }
+
 protected:
 
     void copia(Set const& other) {
@@ -138,6 +145,7 @@ protected:
         else if (menor(e, a->elem)) {
             crece = inserta(e, a->iz);
             if (crece) {
+                a->tam++;
                 reequilibraDer(a);
             }
         }
@@ -158,6 +166,7 @@ protected:
     void rotaDer(Link& r2) {
         Link r1 = r2->iz;
         r2->iz = r1->dr;
+        r2->tam -= r1->tam;
         r1->dr = r2;
         r2->altura = std::max(altura(r2->iz), altura(r2->dr)) + 1;
         r1->altura = std::max(altura(r1->iz), altura(r1->dr)) + 1;
@@ -168,6 +177,7 @@ protected:
         Link r2 = r1->dr;
         r1->dr = r2->iz;
         r2->iz = r1;
+        r2->tam += r1->tam;
         r1->altura = std::max(altura(r1->iz), altura(r1->dr)) + 1;
         r2->altura = std::max(altura(r2->iz), altura(r2->dr)) + 1;
         r1 = r2;
@@ -221,6 +231,7 @@ protected:
         if (a != nullptr) {
             if (menor(e, a->elem)) {
                 decrece = borra(e, a->iz);
+                a->tam--;
                 if (decrece) reequilibraIzq(a);
             }
             else if (menor(a->elem, e)) {
