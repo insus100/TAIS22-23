@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Es un arbol AVL", "Es un ar
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "k-esimo_elemento_en_AVL", "k-esimo_elemento_en_AVL\k-esimo_elemento_en_AVL.vcxproj", "{D9A2E453-E9A7-4D3D-9A16-4725E6DB5E0D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lo_que_cuesta_sumar", "Lo_que_cuesta_sumar\Lo_que_cuesta_sumar.vcxproj", "{9B6823E1-5506-4843-A1E1-1D98AC25039F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{D9A2E453-E9A7-4D3D-9A16-4725E6DB5E0D}.Release|x64.Build.0 = Release|x64
 		{D9A2E453-E9A7-4D3D-9A16-4725E6DB5E0D}.Release|x86.ActiveCfg = Release|Win32
 		{D9A2E453-E9A7-4D3D-9A16-4725E6DB5E0D}.Release|x86.Build.0 = Release|Win32
+		{9B6823E1-5506-4843-A1E1-1D98AC25039F}.Debug|x64.ActiveCfg = Debug|x64
+		{9B6823E1-5506-4843-A1E1-1D98AC25039F}.Debug|x64.Build.0 = Debug|x64
+		{9B6823E1-5506-4843-A1E1-1D98AC25039F}.Debug|x86.ActiveCfg = Debug|Win32
+		{9B6823E1-5506-4843-A1E1-1D98AC25039F}.Debug|x86.Build.0 = Debug|Win32
+		{9B6823E1-5506-4843-A1E1-1D98AC25039F}.Release|x64.ActiveCfg = Release|x64
+		{9B6823E1-5506-4843-A1E1-1D98AC25039F}.Release|x64.Build.0 = Release|x64
+		{9B6823E1-5506-4843-A1E1-1D98AC25039F}.Release|x86.ActiveCfg = Release|Win32
+		{9B6823E1-5506-4843-A1E1-1D98AC25039F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
