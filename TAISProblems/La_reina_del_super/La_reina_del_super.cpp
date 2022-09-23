@@ -18,7 +18,7 @@
 #include <limits>
 #include <queue>
 using namespace std;
-#include "PriorityQueue.h"
+//#include "PriorityQueue.h"
 /*@ <answer>
 
  Escribe aquí un comentario general sobre la solución, explicando cómo
@@ -45,25 +45,26 @@ struct Cliente {
 
 bool operator<(Cliente const& a, Cliente const& b) {
 	//return a.tiempo < b.tiempo || a.caja < b.caja;
-	if (a.tiempo < b.tiempo) {
+	return (a.tiempo > b.tiempo) || (a.tiempo == b.tiempo && a.caja > b.caja);
+	/*if (a.tiempo < b.tiempo) {
 		return true;
 	}
 	else if (a.tiempo == b.tiempo) {
 		return a.caja < b.caja;
 
 	}
-	return false;
+	return false;*/
 }
 
 struct Compare
 {
 	bool operator()(Cliente const& a, Cliente const& b)
 	{
-		return a.tiempo > b.tiempo || a.caja > b.caja;
+		return (a.tiempo > b.tiempo) || (a.tiempo == b.tiempo && a.caja > b.caja);
 	}
 };
 
-int resolver(PriorityQueue<Cliente>& c, int C) {//coste O(NlogN) siendo N el numero de cajas
+int resolver(priority_queue<Cliente>& c, int C) {//coste O(NlogN) siendo N el numero de cajas
 	int libres = c.size();
 	int tiem = 0;
 	for (int i = 0; i < C; i++) {
@@ -91,7 +92,8 @@ bool resuelveCaso() {
 	cin >> N >> C;
 	if (N == 0)
 		return false;
-	PriorityQueue<Cliente> cola;
+	//PriorityQueue<Cliente> cola;
+	priority_queue<Cliente> cola;
 	Cliente c;
 	for (int i = 0; i < N; i++) {
 		c.caja = i + 1;
