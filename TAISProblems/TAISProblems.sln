@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Volando_drones", "Volando_d
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Multitarea", "Multitarea\Multitarea.vcxproj", "{0320F19A-FF35-47B3-A17C-3E6799899B0B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Las_partituras_de_la_orquesta", "Las_partituras_de_la_orquesta\Las_partituras_de_la_orquesta.vcxproj", "{0D32D5AC-9CB6-48B9-8882-E27513F29FED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{0320F19A-FF35-47B3-A17C-3E6799899B0B}.Release|x64.Build.0 = Release|x64
 		{0320F19A-FF35-47B3-A17C-3E6799899B0B}.Release|x86.ActiveCfg = Release|Win32
 		{0320F19A-FF35-47B3-A17C-3E6799899B0B}.Release|x86.Build.0 = Release|Win32
+		{0D32D5AC-9CB6-48B9-8882-E27513F29FED}.Debug|x64.ActiveCfg = Debug|x64
+		{0D32D5AC-9CB6-48B9-8882-E27513F29FED}.Debug|x64.Build.0 = Debug|x64
+		{0D32D5AC-9CB6-48B9-8882-E27513F29FED}.Debug|x86.ActiveCfg = Debug|Win32
+		{0D32D5AC-9CB6-48B9-8882-E27513F29FED}.Debug|x86.Build.0 = Debug|Win32
+		{0D32D5AC-9CB6-48B9-8882-E27513F29FED}.Release|x64.ActiveCfg = Release|x64
+		{0D32D5AC-9CB6-48B9-8882-E27513F29FED}.Release|x64.Build.0 = Release|x64
+		{0D32D5AC-9CB6-48B9-8882-E27513F29FED}.Release|x86.ActiveCfg = Release|Win32
+		{0D32D5AC-9CB6-48B9-8882-E27513F29FED}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
