@@ -8,9 +8,11 @@
 #include <iostream>
 #include <fstream>
 #include <climits>
+#include <queue>
 using namespace std;
 
 #include "Digrafo.h"  // propios o los de las estructuras de datos de clase
+#define INF 1000000000 //10^9
 
 /*@ <answer>
 
@@ -25,6 +27,24 @@ using namespace std;
  // Escribe el código completo de tu solución aquí debajo
  // ================================================================
  //@ <answer>
+int bfs(int vector<int> const& v, int const &N, int const &K) {
+    int destino = N * N;
+    queue<int> q;
+    vector<int> distancia(destino + 1, INF);
+    q.push(1);
+    while (!q.empty()) {
+        int v = q.front(); q.pop();
+        for (int i = 1; i <= K && v + i <= destino; ++i) {
+            if (distancia[w] == INF) {
+                distancia[w] = distancia[v] + 1;
+                if (w == destino)
+                    return distancia[destino];
+                q.push(w);
+            }
+        }
+    }
+}
+
 
 bool resuelveCaso() {
 
@@ -33,6 +53,8 @@ bool resuelveCaso() {
     cin >> N >> K >> S >> E;
     if (N == 0)
         return false;
+
+    vector<int>
 
     // resolver el caso posiblemente llamando a otras funciones
 
