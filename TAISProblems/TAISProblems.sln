@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Difundiendo_un_rumor", "Dif
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Haciendo_trampas_en_Serpientes_y_Escaleras", "Haciendo_trampas_en_Serpientes_y_Escaleras\Haciendo_trampas_en_Serpientes_y_Escaleras.vcxproj", "{61453BFF-3A96-4980-8D78-156E07B655C1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Donde_construimos_aeropuertos", "Donde_construimos_aeropuertos\Donde_construimos_aeropuertos.vcxproj", "{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{61453BFF-3A96-4980-8D78-156E07B655C1}.Release|x64.Build.0 = Release|x64
 		{61453BFF-3A96-4980-8D78-156E07B655C1}.Release|x86.ActiveCfg = Release|Win32
 		{61453BFF-3A96-4980-8D78-156E07B655C1}.Release|x86.Build.0 = Release|Win32
+		{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}.Debug|x64.ActiveCfg = Debug|x64
+		{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}.Debug|x64.Build.0 = Debug|x64
+		{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}.Debug|x86.ActiveCfg = Debug|Win32
+		{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}.Debug|x86.Build.0 = Debug|Win32
+		{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}.Release|x64.ActiveCfg = Release|x64
+		{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}.Release|x64.Build.0 = Release|x64
+		{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}.Release|x86.ActiveCfg = Release|Win32
+		{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
