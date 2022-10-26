@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Haciendo_trampas_en_Serpien
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Donde_construimos_aeropuertos", "Donde_construimos_aeropuertos\Donde_construimos_aeropuertos.vcxproj", "{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ratones_en_un_laberinto", "Ratones_en_un_laberinto\Ratones_en_un_laberinto.vcxproj", "{02DC21E6-0DDB-4D05-AFEE-E9946682445A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}.Release|x64.Build.0 = Release|x64
 		{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}.Release|x86.ActiveCfg = Release|Win32
 		{ABAD7E18-BB46-48DC-A764-D2474A9B59F7}.Release|x86.Build.0 = Release|Win32
+		{02DC21E6-0DDB-4D05-AFEE-E9946682445A}.Debug|x64.ActiveCfg = Debug|x64
+		{02DC21E6-0DDB-4D05-AFEE-E9946682445A}.Debug|x64.Build.0 = Debug|x64
+		{02DC21E6-0DDB-4D05-AFEE-E9946682445A}.Debug|x86.ActiveCfg = Debug|Win32
+		{02DC21E6-0DDB-4D05-AFEE-E9946682445A}.Debug|x86.Build.0 = Debug|Win32
+		{02DC21E6-0DDB-4D05-AFEE-E9946682445A}.Release|x64.ActiveCfg = Release|x64
+		{02DC21E6-0DDB-4D05-AFEE-E9946682445A}.Release|x64.Build.0 = Release|x64
+		{02DC21E6-0DDB-4D05-AFEE-E9946682445A}.Release|x86.ActiveCfg = Release|Win32
+		{02DC21E6-0DDB-4D05-AFEE-E9946682445A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
