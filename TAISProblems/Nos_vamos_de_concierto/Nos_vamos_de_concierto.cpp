@@ -27,6 +27,13 @@ using namespace std;
  se resuelve el problema y cuál es el coste de la solución, en función
  del tamaño del problema.
 
+ En la funcion concierto() inicializamos la matriz de tamaño (N*P) a -1 porque es un problema de maximizar.
+ Después llamamos a la funcion recursiva resolver(), la cual utiliza programacion dinamica descendente.
+ Miramos en la matriz si el subproblema[i][j] se ha resuelto y si es asi lo devolvemos. Sino en los casos recursivos devolvemos el valor [i][j]
+ quedandonos con el max de ambas llamadas ya que es un problema de maximizar.
+ Por ultimo despues de realizarse la llamada recursiva, creamos un vector de booleanos que pone a true los indices que pertenecen a las
+ soluciones optimas.
+
  Escribe en particular la especificación y definición de la recurrencia
  en la que te has basado para resolver el problema por programación dinámica.
  Primera llamada
