@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Los_Broncos_de_Boston", "Lo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Nos_vamos_de_concierto", "Nos_vamos_de_concierto\Nos_vamos_de_concierto.vcxproj", "{03E2B16B-168E-498C-A825-4032AB7EDFED}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Subsecuencia_comun_mas_larga", "Subsecuencia_comun_mas_larga\Subsecuencia_comun_mas_larga.vcxproj", "{428B8BE6-702C-4CBA-99CA-FBC7EEC0A79A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -171,6 +173,14 @@ Global
 		{03E2B16B-168E-498C-A825-4032AB7EDFED}.Release|x64.Build.0 = Release|x64
 		{03E2B16B-168E-498C-A825-4032AB7EDFED}.Release|x86.ActiveCfg = Release|Win32
 		{03E2B16B-168E-498C-A825-4032AB7EDFED}.Release|x86.Build.0 = Release|Win32
+		{428B8BE6-702C-4CBA-99CA-FBC7EEC0A79A}.Debug|x64.ActiveCfg = Debug|x64
+		{428B8BE6-702C-4CBA-99CA-FBC7EEC0A79A}.Debug|x64.Build.0 = Debug|x64
+		{428B8BE6-702C-4CBA-99CA-FBC7EEC0A79A}.Debug|x86.ActiveCfg = Debug|Win32
+		{428B8BE6-702C-4CBA-99CA-FBC7EEC0A79A}.Debug|x86.Build.0 = Debug|Win32
+		{428B8BE6-702C-4CBA-99CA-FBC7EEC0A79A}.Release|x64.ActiveCfg = Release|x64
+		{428B8BE6-702C-4CBA-99CA-FBC7EEC0A79A}.Release|x64.Build.0 = Release|x64
+		{428B8BE6-702C-4CBA-99CA-FBC7EEC0A79A}.Release|x86.ActiveCfg = Release|Win32
+		{428B8BE6-702C-4CBA-99CA-FBC7EEC0A79A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
