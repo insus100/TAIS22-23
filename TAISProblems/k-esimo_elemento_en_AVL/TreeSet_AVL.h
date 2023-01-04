@@ -16,6 +16,7 @@
 #include <algorithm>
 #include <functional>
 #include <stack>
+#include <exception>
 #include <stdexcept>
 #include <utility>
 

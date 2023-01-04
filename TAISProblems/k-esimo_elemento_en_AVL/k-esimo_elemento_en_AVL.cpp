@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <exception>
 #include <stdexcept>
 using namespace std;
 
