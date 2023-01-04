@@ -92,11 +92,41 @@ public:
         return borra(e, raiz);
     }
 
+    T const& busqueda(Link a, int k) const {
+
+        if (a == nullptr) {
+            throw domain_error("??");
+        }
+        else {
+            if (a->tam < k) {
+                if (a->dr == nullptr) {
+                    throw domain_error("??");
+                }
+                return busqueda(a->dr, k - a->tam);
+            }
+            else if (a->tam == k) {
+                return a->elem;
+            }
+            else {
+                if (a->iz == nullptr) {
+                    throw domain_error("??");
+                }
+                return busqueda(a->iz, k);
+            }
+        }
+    }
+
+
     T const& kesimo(int k) const {
-        Link p = pertenece(k, raiz);
-        if (p == nullptr)
-            return -1;
-        return p->elem;
+        if (this->empty()) {
+            throw domain_error("??");
+        }
+        try {
+            return busqueda(raiz, k);
+        }
+        catch (domain_error e) {
+            throw domain_error("??");
+        }
     }
 
 protected:

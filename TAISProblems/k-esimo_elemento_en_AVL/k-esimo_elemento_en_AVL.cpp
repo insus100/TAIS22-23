@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <stdexcept>
 using namespace std;
 
 #include "TreeSet_AVL.h"  // propios o los de las estructuras de datos de clase
@@ -48,14 +49,19 @@ bool resuelveCaso() {
         cin >> c;
         casos.push_back(c);
     }
+
     // resolver el caso posiblemente llamando a otras funciones
 
     // escribir la solución
     for (int& i : casos)
     {
-        int res = set.kesimo(i);
-        res != -1 ? cout << res : cout << "??";
-        cout << "\n";
+        try {
+            int res = set.kesimo(i);
+            cout << res << "\n";
+        }
+        catch (domain_error e) {
+            cout << e.what() << "\n";
+        }
     }
     cout << "----" << "\n";
     return true;
