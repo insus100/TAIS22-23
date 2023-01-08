@@ -28,16 +28,14 @@ using Camino = deque<int>;
  //@ <answer>
 class Necronomicon {
 public:
-	Necronomicon(Digrafo const& g, vector<char> const& instrucciones) : visit(g.V(), false), ant(g.V()), apilado(g.V(), false), hayciclo(false), aveces(false), instrucciones(instrucciones) {
-		for (int v = 0; v < g.V(); ++v)
-			if (!visit[v])
-				dfs(g, v);
-	}
-	bool a_veces() const {
-		return aveces;
+	Necronomicon(Digrafo const& g, vector<char> const& instrucciones) : visit(g.V(), false), ant(g.V()), apilado(g.V(), false), hayciclo(false), instrucciones(instrucciones) {
+		dfs(g, 0);
 	}
 	bool hayCiclo() const {
 		return hayciclo;
+	}
+	bool hayCamino(int v) const {
+		return visit[v];
 	}
 
 private:
@@ -47,32 +45,44 @@ private:
 	vector<char> instrucciones;
 	Camino _ciclo; // ciclo dirigido (vacío si no existe)
 	bool hayciclo;
-	bool aveces;
 
 	void dfs(Digrafo const& g, int v) {
 		apilado[v] = true;
 		visit[v] = true;
 		for (int w : g.ady(v)) {
-			if (hayciclo) // si hemos encontrado un ciclo terminamos
-				return;
+			//if (hayciclo) // si hemos encontrado un ciclo terminamos
+			// 	return;
 			if (!visit[w]) { // encontrado un nuevo vértice, seguimos
-				ant[w] = v; dfs(g, w);
+				//ant[w] = v;
+				dfs(g, w);
 			}
 			else if (apilado[w]) { // hemos detectado un ciclo
 		 // se recupera retrocediendo
 				hayciclo = true;
-				for (int x = v; x != w; x = ant[x]) {
+				/*for (int x = v; x != w; x = ant[x]) {
 					_ciclo.push_front(x);
-					if (instrucciones[x] == 'C') aveces = true;
+					//if (instrucciones[x] == 'C') aveces = true;
 				}
 					
-				_ciclo.push_front(w); _ciclo.push_front(v);
+				_ciclo.push_front(w); _ciclo.push_front(v);*/
 			}
 		}
 		apilado[v] = false;
 	}
 };
 
+/*
+Interesa poner un vértice más, detrás de la última instrucción, para
+saber que el programa ha terminado. Hay que averiguar si desde el vértice
+inicial (no hay que buscar en todas las componentes conexas, solamente en la
+que incluye ese vértice) se alcanza un ciclo, y si desde ese vértice es
+alcanzable el último vértice (el ficticio). Dependiendo de la respuesta a
+esas preguntas se decide la solución.
+
+Si alcanza el vértice final desde el principio y no hay ciclo es siempre.
+Si alcanza el vértice final desde el principio y hay ciclo es a veces.
+Si no lo alcanza es nunca.
+*/
 
 bool resuelveCaso() {
 
@@ -82,7 +92,7 @@ bool resuelveCaso() {
 	cin >> L;
 	if (!std::cin)  // fin de la entrada
 		return false;
-	Digrafo g(L);
+	Digrafo g(L + 1);
 	vector<char> instrucciones(L);
 	for (int i = 0; i < L; i++) {
 		cin >> ins;
@@ -99,13 +109,17 @@ bool resuelveCaso() {
 		instrucciones[i] = ins;
 	}
 
+	if(instrucciones[L - 1] != 'J') g.ponArista(g.V() - 2, g.V() - 1);//vertice ficticio "fin de programa"
+
 	// resolver el caso posiblemente llamando a otras funciones
 	Necronomicon n(g, instrucciones);
 	// escribir la solución
-	if (n.hayCiclo()) {
-		n.a_veces() ? cout << "A VECES\n" : cout << "NUNCA\n";
-	}else{
-		cout << "SIEMPRE\n";
+
+	if (n.hayCamino(L)) {
+		n.hayCiclo() ? cout << "A VECES\n" : cout << "SIEMPRE\n";
+	}
+	else {
+		cout << "NUNCA\n";
 	}
 	return true;
 }
