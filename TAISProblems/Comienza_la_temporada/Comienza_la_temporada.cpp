@@ -52,9 +52,9 @@ bool resuelveCaso() {
             i++;
             j++;
         }
-        else {
-            j++;
-        }
+        else if (tallasChicos[i] > tallasStock[j]) {
+            i++;
+        } else j++;
     }
     // escribir la solución
     cout << N - sol << "\n";
